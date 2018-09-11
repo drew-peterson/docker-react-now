@@ -5,10 +5,10 @@ services:
 node_js:
   - "node"
 cache: yarn
-# before_install:
-# - docker build -t weeznog/docker-react-now -f ./client/Dockerfile.dev ./client
-# script:
-# - docker run weeznog/docker-react-now yarn test -- --coverage
+before_install:
+  - docker build -t weeznog/docker-react-now -f ./client/Dockerfile.dev ./client
+script:
+  - docker run weeznog/docker-react-now yarn test -- --coverage
 before_deploy: yarn add now
 deploy:
   - provider: script
