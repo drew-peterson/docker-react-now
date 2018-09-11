@@ -1,3 +1,4 @@
 targets:
   dev: local/cjly9erov000b01008ptsy7tk
   default: dev
+  prod: shared-us-west-2/cjlyawo6r0nk90198cjzoyybh

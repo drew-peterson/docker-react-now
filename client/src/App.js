@@ -12,8 +12,10 @@ const hello = gql`
 `;
 
 const client = new ApolloClient({
-  uri: " http://localhost:60000/simple/v1/cjly9erov000b01008ptsy7tk"
+  uri: process.env.REACT_APP_GRAPHCOOL_URI
 });
+
+console.log("ENV:", process.env.REACT_APP_GRAPHCOOL_URI);
 class App extends Component {
   render() {
     return (
