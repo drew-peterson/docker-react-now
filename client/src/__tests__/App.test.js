@@ -1,1 +1,3 @@
-describe("test me", () => {});
+describe("<App />", () => {
+  test("test me", () => {});
+});
