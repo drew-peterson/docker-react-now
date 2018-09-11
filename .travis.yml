@@ -21,7 +21,9 @@
 #       branch: master
 # notifcations:
 #   email: false
-
+language: node_js
+node_js:
+  - "node"
 deploy:
   provider: script
   script: now --docker --public --token $NOW_TOKEN
