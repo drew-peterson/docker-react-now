@@ -8,14 +8,17 @@ script:
   - docker run weeznog/docker-react-now yarn test -- --coverage
 
 deploy:
-  - provider: script # Run a custom deployment script which we will define below
-    script: now --docker --public --token $NOW_TOKEN
-    skip_cleanup: true
-    on:
-      all_branches: true
-      master: false
-  - provider: script
-    script: now --docker --public --token $NOW_TOKEN && now alias drew-test --token $NOW_TOKEN
+  # - provider: script # Run a custom deployment script which we will define below
+  #   script: now --docker --public --token $NOW_TOKEN
+  #   skip_cleanup: true
+  #   on:
+  #     all_branches: true
+  #     master: false
+  provider: script
+    # script: now --docker --public --token $NOW_TOKEN && now alias drew-test --token $NOW_TOKEN
+    script: now --docker --public
     skip_cleanup: true
     on:
       branch: master
+notifcations:
+  email: false
