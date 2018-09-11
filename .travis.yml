@@ -1,6 +1,10 @@
 sudo: required
+language: node_js
 services:
   - docker
+node_js:
+  - "node"
+cache: yarn
 
 before_install:
   - docker build -t weeznog/docker-react-now -f Dockerfile.dev .
