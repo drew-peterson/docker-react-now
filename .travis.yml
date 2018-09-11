@@ -14,13 +14,13 @@ script:
 before_deploy: yarn add now
 deploy:
   - provider: script
-    script: now --docker --public --token $NOW_TOKEN
+    script: now ./client --docker --public --token $NOW_TOKEN
     skip_cleanup: true
     on:
       all_branches: true
       master: false
   - provider: script
-    script: now --docker --public --token $NOW_TOKEN && now alias docker-react-now --token $NOW_TOKEN
+    script: now ./client --docker --public --token $NOW_TOKEN && now alias docker-react-now --token $NOW_TOKEN
     skip_cleanup: true
     on:
       branch: master
