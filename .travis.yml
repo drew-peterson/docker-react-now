@@ -6,19 +6,19 @@ node_js:
   - "node"
 cache: yarn
 before_install:
-  - docker build -t weeznog/docker-react-now -f Dockerfile.dev .
+  - docker build -t weeznog/docker-react-now -f Dockerfile.dev ./client
 script:
   - docker run weeznog/docker-react-now yarn test -- --coverage
 before_deploy: yarn add now
 deploy:
   - provider: script
-    script: now --docker --public --token $NOW_TOKEN
+    script: now ./client --docker --public --token $NOW_TOKEN
     skip_cleanup: true
     on:
       all_branches: true
       master: false
   - provider: script
-    script: now --docker --public --token $NOW_TOKEN && now alias drew-test --token $NOW_TOKEN
+    script: now ./client --docker --public --token $NOW_TOKEN && now alias drew-test --token $NOW_TOKEN
     skip_cleanup: true
     on:
       branch: master
