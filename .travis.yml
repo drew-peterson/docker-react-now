@@ -14,7 +14,7 @@ deploy:
   #   on:
   #     all_branches: true
   #     master: false
-  provider: script
+  - provider: script
     # script: now --docker --public --token $NOW_TOKEN && now alias drew-test --token $NOW_TOKEN
     script: now --docker --public
     skip_cleanup: true
