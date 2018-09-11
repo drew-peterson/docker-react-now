@@ -4,7 +4,9 @@ services:
   - docker
 node_js:
   - "node"
-cache: yarn
+cache:
+  directories:
+    - "node_modules"
 before_install:
   - docker build -t weeznog/docker-react-now -f ./client/Dockerfile.dev ./client
 script:
