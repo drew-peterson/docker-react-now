@@ -8,7 +8,7 @@ script:
   - docker run weeznog/docker-react-now yarn test -- --coverage
 
 deploy:
-   - provider: script # Run a custom deployment script which we will define below
+  - provider: script # Run a custom deployment script which we will define below
     script: now --token $NOW_TOKEN
     skip_cleanup: true
     on:
