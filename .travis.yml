@@ -9,13 +9,13 @@ script:
 
 deploy:
   - provider: script # Run a custom deployment script which we will define below
-    script: now --token $NOW_TOKEN
+    script: now --docker --public --token $NOW_TOKEN
     skip_cleanup: true
     on:
       all_branches: true
       master: false
   - provider: script
-    script: now --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+    script: now --docker --public --token $NOW_TOKEN && now alias drew-test --token $NOW_TOKEN
     skip_cleanup: true
     on:
       branch: master
