@@ -5,14 +5,13 @@ services:
 node_js:
   - "node"
 cache: yarn
-
 before_install:
   - docker build -t weeznog/docker-react-now -f Dockerfile.dev .
 script:
   - docker run weeznog/docker-react-now yarn test -- --coverage
 before_deploy: yarn add now
 deploy:
-  - provider: script # Run a custom deployment script which we will define below
+  - provider: script
     script: now --docker --public --token $NOW_TOKEN
     skip_cleanup: true
     on:
@@ -23,22 +22,5 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-notifcations:
+notifications:
   email: false
-
-# language: node_js
-# node_js:
-#   - "node"
-# cache:
-#   directories:
-#     - "node_modules" # This will tell Travis CI to cache the dependencies
-# # script: npm test # Here you could also run the build step of your application
-# before_deploy: npm install now --no-save # Install Now CLI on Travis
-# deploy:
-#   provider: script
-#   script: now --docker --public --token $NOW_TOKEN
-#   skip_cleanup: true
-#   on:
-#     branch: master
-# notifcations:
-#   email: false
