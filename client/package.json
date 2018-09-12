@@ -2,7 +2,6 @@
   "name": "docker-react-now",
   "version": "0.1.0",
   "private": true,
-  "alias": "docker-react-now",
   "dependencies": {
     "apollo-boost": "^0.1.15",
     "graphql": "^14.0.2",

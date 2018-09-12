@@ -4,9 +4,7 @@ services:
   - docker
 node_js:
   - "node"
-cache:
-  directories:
-    - "node_modules"
+cache: yarn
 before_install:
   - docker build -t weeznog/docker-react-now -f ./client/Dockerfile.dev ./client
 script:
@@ -20,7 +18,7 @@ deploy:
       all_branches: true
       master: false
   - provider: script
-    script: now ./client --docker --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+    script: now ./client --docker --public --token $NOW_TOKEN && now alias client docker-react-now --token $NOW_TOKEN
     skip_cleanup: true
     on:
       branch: master
