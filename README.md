@@ -13,5 +13,11 @@
 
 ## other
 
-- you can automatically do the aliasa in package.json or now.json
-  <!-- - also alias is name of docker container name of alias client docker-react-now -->
+{
+"name": "docker-react-now",
+"alias": "drew-prod"
+}
+
+### look into microservices
+
+- https://zeit.co/docs/features/path-aliases
