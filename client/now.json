@@ -1,4 +1,4 @@
 {
-  "name": "docker-react-now",
-  "alias": "drew-prod"
+  "name": "docker-react-now-client",
+  "alias": "drew-prod-client"
 }
