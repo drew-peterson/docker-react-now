@@ -25,7 +25,11 @@ class App extends Component {
             if (loading) return "Loading...";
             if (error) return `Error: ${error.message}`;
 
-            return <h1>{hello.message}</h1>;
+            return (
+              <div>
+                <h1>{hello.message}</h1>;<h4>sub header</h4>
+              </div>
+            );
           }}
         </Query>
       </ApolloProvider>
