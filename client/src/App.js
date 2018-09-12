@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <Query query={hello}>
-          {({ loading, error, data: { hello } }) => {
+          {({ loading, error, data: { hello }, refetch }) => {
             if (loading) return "Loading...";
             if (error) return `Error: ${error.message}`;
 
@@ -29,7 +29,7 @@ class App extends Component {
               <div>
                 <h1>{hello.message}</h1>
                 <h4>sub header</h4>
-                <h4>sub header 3</h4>
+                <button onclick={refetch}>click me</button>
               </div>
             );
           }}
