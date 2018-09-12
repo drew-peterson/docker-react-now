@@ -29,7 +29,7 @@ class App extends Component {
               <div>
                 <h1>{hello.message}</h1>
                 <h4>sub header</h4>
-                <h4>sub header 2</h4>
+                <h4>sub header 3</h4>
               </div>
             );
           }}
