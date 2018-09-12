@@ -1,57 +1,31 @@
-import React, { Component } from "react";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider, Query } from "react-apollo";
-import gql from "graphql-tag";
-import axios from "axios";
+import React from "react";
 
-const hello = gql`
-  {
-    hello(name: "drew") {
-      message
-    }
-  }
-`;
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import Details from "./pages/Details";
+import Home from "./pages/Home";
+
+import { ApolloProvider } from "react-apollo";
+import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_GRAPHCOOL_URI
 });
 
 console.log("ENV:", process.env.REACT_APP_GRAPHCOOL_URI);
-class App extends Component {
-  click = async e => {
-    e.preventDefault();
-    console.log("click");
-    const { data } = await axios.get(this.state.url);
-    console.log("data:", data);
-  };
 
-  state = { url: "http://localhost:5000/api/hi" };
+const Router = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/details" component={Details} />
+    </Switch>
+  </BrowserRouter>
+);
 
-  render() {
-    return (
-      <ApolloProvider client={client}>
-        <Query query={hello}>
-          {({ loading, error, data: { hello }, refetch }) => {
-            if (loading) return "Loading...";
-            if (error) return `Error: ${error.message}`;
-
-            return (
-              <div>
-                <h1>{hello.message}</h1>
-                <h4>sub header</h4>
-                <input
-                  style={{ width: 200 }}
-                  value={this.state.url}
-                  onChange={e => this.setState({ url: e.target.value })}
-                />
-                <button onClick={this.click}>fetch api</button>
-              </div>
-            );
-          }}
-        </Query>
-      </ApolloProvider>
-    );
-  }
-}
+const App = () => (
+  <ApolloProvider client={client}>
+    <Router />
+  </ApolloProvider>
+);
 
 export default App;
