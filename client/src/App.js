@@ -27,7 +27,8 @@ class App extends Component {
 
             return (
               <div>
-                <h1>{hello.message}</h1>;<h4>sub header</h4>
+                <h1>{hello.message}</h1>
+                <h4>sub header</h4>
               </div>
             );
           }}
