@@ -19,7 +19,7 @@ deploy:
       master: false
   - provider: script
     # this doesnt handle multiple envs.....
-    script: now ./client --docker --public --token $NOW_TOKEN && now --token $NOW_TOKEN && now rm docker-react-now --safe --yes --token $NOW_TOKEN
+    script: now ./client --docker --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN && now rm docker-react-now --safe --yes --token $NOW_TOKEN
     # script: now ./client --docker --public --token $NOW_TOKEN && now alias drew-peterson --token $NOW_TOKEN
     skip_cleanup: true
     on:
