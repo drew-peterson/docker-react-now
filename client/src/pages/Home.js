@@ -19,7 +19,7 @@ class Home extends Component {
     console.log("data", data);
   };
 
-  state = { url: "/api/hi" };
+  state = { url: "/api/env" };
 
   render() {
     return (
