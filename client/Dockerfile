@@ -6,7 +6,7 @@ COPY . .
 
 # from now.json will be added to react client
 ARG REACT_APP_NOW_ENV 
-ARG REACT_APP_NOW_SECRET 
+ARG REACT_APP_SECRET 
 ENV REACT_APP_TEST="hello from dockerfile"
 RUN yarn build
 
