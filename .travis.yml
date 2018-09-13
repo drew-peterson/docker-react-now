@@ -14,11 +14,12 @@ script:
 # before_deploy: yarn add now
 deploy:
   - provider: script
-    script: now ./client --docker --public --token $NOW_TOKEN && now alias -A ./client/now.dev.json --token $NOW_TOKEN
+    script: bash deploy-stage.sh
     skip_cleanup: true
     on:
-      all_branches: true
-      master: false
+      branch: stage
+      # all_branches: true
+      # master: false
   - provider: script
     script: bash deploy-prod.sh
     skip_cleanup: true
