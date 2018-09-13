@@ -1,6 +1,6 @@
 {
   "name": "drew-client",
-  "alias": "drew-stage-client",
+  "alias": "drew-client-stage",
   "build": {
     "env": {
       "REACT_APP_NOW_ENV": "stage"

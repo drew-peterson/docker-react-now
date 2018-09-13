@@ -11,7 +11,6 @@ before_install:
 script:
   - echo "skipping tests"
   # - docker run weeznog/docker-react-now yarn test -- --coverage
-# before_deploy: yarn add now
 deploy:
   - provider: script
     script: bash deploy-stage.sh

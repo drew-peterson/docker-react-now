@@ -1,6 +1,6 @@
 {
   "name": "drew-client",
-  "alias": "drew-prod-client",
+  "alias": "drew-client-prod",
   "build": {
     "env": {
       "REACT_APP_NOW_ENV": "production",

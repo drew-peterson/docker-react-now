@@ -1,6 +1,6 @@
 {
-  "name": "drew-prod-api",
-  "alias": "drew-prod-api",
+  "name": "drew-api",
+  "alias": "drew-api-prod",
   "build": {
     "env": {
       "NOW_TEST": "now api test"

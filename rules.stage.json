@@ -2,10 +2,10 @@
   "rules": [
     {
       "pathname": "/api/**",
-      "dest": "drew-stage-api.now.sh"
+      "dest": "drew-api-stage.now.sh"
     },
     {
-      "dest": "drew-stage-client.now.sh"
+      "dest": "drew-client-stage.now.sh"
     }
   ]
 }
