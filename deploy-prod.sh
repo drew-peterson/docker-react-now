@@ -6,4 +6,4 @@
     
 cd client
 now --docker --public --token $NOW_TOKEN
-now alias  --token $NOW_TOKEN
+now alias -A now.json --token $NOW_TOKEN
