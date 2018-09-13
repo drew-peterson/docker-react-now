@@ -30,7 +30,7 @@ class Home extends Component {
 
           return (
             <div>
-              <h1>{hello.message}</h1>
+              <h1>{hello.message} from stage</h1>
               <Link to="/details">Details</Link>
               <br />
               <br />
