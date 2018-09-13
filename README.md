@@ -18,6 +18,12 @@
 "alias": "drew-prod"
 }
 
+now ./client --docker --public --token $NOW_TOKEN &&
+now alias -A ./client/now.json --token $NOW_TOKEN
+now ./api --docker --public --token $NOW_TOKEN &&
+now alias -A ./api/now.json --token $NOW_TOKEN &&
+now alias drew-prod.now.sh -r rules.json --token $NOW_TOKEN
+
 ### look into microservices
 
 - https://zeit.co/docs/features/path-aliases
