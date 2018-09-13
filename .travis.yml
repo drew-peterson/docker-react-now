@@ -13,12 +13,12 @@ script:
   # - docker run weeznog/docker-react-now yarn test -- --coverage
 # before_deploy: yarn add now
 deploy:
-  # - provider: script
-  #   script: now ./client --docker --public --token $NOW_TOKEN && now alias -A ./client/now.dev.json --token $NOW_TOKEN
-  #   skip_cleanup: true
-  #   on:
-  #     all_branches: true
-  #     master: false
+  - provider: script
+    script: now ./client --docker --public --token $NOW_TOKEN && now alias -A ./client/now.dev.json --token $NOW_TOKEN
+    skip_cleanup: true
+    on:
+      all_branches: true
+      master: false
   - provider: script
     script: bash deploy-prod.sh
     skip_cleanup: true
