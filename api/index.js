@@ -11,7 +11,7 @@ app.get("/api/hi", (req, res) => {
 });
 
 app.get("/api/env", (req, res) => {
-  res.send({ env: process.env });
+  res.json({ env: process.env });
 });
 
 app.get("/hi", (req, res) => {
