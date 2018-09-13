@@ -1,4 +1,8 @@
 {
   "name": "drew-client",
-  "alias": "drew-prod-client"
+  "alias": "drew-prod-client",
+  "env": {
+    "REACT_APP_NOW_TEST": "@now-test",
+    "REACT_APP_NOW_TEST_2": "test here"
+  }
 }

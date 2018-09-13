@@ -1,4 +1,8 @@
 {
   "name": "drew-prod-api",
-  "alias": "drew-prod-api"
+  "alias": "drew-prod-api",
+  "env": {
+    "REACT_APP_NOW_TEST": "@now-test",
+    "REACT_APP_NOW_TEST_2": "test here"
+  }
 }
