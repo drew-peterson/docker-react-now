@@ -3,7 +3,7 @@ WORKDIR '/app'
 COPY ./package.json ./
 RUN yarn install
 COPY . .
-ENV REACT_APP_TEST="hello from dockerfile"
+ENV REACT_APP_TEST="hello from dockerfile" REACT_APP_TRAVIS=${REACT_APP_TRAVIS}
 RUN yarn build
 
 FROM nginx

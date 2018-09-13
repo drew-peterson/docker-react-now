@@ -21,13 +21,11 @@ deploy:
       # all_branches: true
       # master: false
   - provider: script
-    env:
-      - API_ENV_TEST="from travis file"
-      - API_ENV_TEST_2="from travis file 2"
-      - REACT_APP_TRAVIS_2="env from travis 2"
     script: bash deploy-prod.sh
     skip_cleanup: true
     on:
       branch: master
+env:
+  - REACT_APP_TRAVIS: "hello from travis"
 notifications:
   email: false
