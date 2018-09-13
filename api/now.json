@@ -4,6 +4,12 @@
   "build": {
     "env": {
       "NOW_TEST": "now api test"
+    },
+    "scale": {
+      "sfo1": {
+        "min": 1,
+        "max": "auto"
+      }
     }
   }
 }

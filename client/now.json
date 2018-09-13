@@ -6,5 +6,11 @@
       "REACT_APP_NOW_ENV": "production",
       "REACT_APP_SECRET": "@my-secret"
     }
+  },
+  "scale": {
+    "sfo1": {
+      "min": 1,
+      "max": "auto"
+    }
   }
 }
