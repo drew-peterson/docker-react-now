@@ -1,3 +1,4 @@
+echo 'DEPLOYING TO STAGE'
 now ./client --docker --public --token $NOW_TOKEN
 now alias -A ./client/now.stage.json --token $NOW_TOKEN
 now ./api --docker --public --token $NOW_TOKEN

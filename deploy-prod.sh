@@ -1,3 +1,4 @@
+echo 'DEPLOYING TO PROD'
 now ./client --docker --public --token $NOW_TOKEN
 now alias -A ./client/now.json --token $NOW_TOKEN
 now ./api --docker --public --token $NOW_TOKEN
