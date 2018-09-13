@@ -3,7 +3,7 @@
   "alias": "drew-prod-api",
   "build": {
     "env": {
-      "REACT_APP_NOW_TEST_2": "test here"
+      "REACT_APP_NOW_TEST": "test here"
     }
   }
 }

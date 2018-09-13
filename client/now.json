@@ -3,7 +3,8 @@
   "alias": "drew-prod-client",
   "build": {
     "env": {
-      "REACT_APP_NOW_TEST_2": "test here"
+      "REACT_APP_NOW": "Now test 1",
+      "NOW_TEST": "Now test 2"
     }
   }
 }
