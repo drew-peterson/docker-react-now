@@ -10,8 +10,8 @@ app.get("/api/hi", (req, res) => {
   res.send("hi from /api/hi");
 });
 
-app.get("/api/drew", (req, res) => {
-  res.send("hi from /api/drew");
+app.get("/api/env", (req, res) => {
+  res.send({ env: process.env });
 });
 
 app.get("/hi", (req, res) => {

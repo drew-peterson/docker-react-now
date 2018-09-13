@@ -7,11 +7,16 @@ import Home from "./pages/Home";
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
 
-const client = new ApolloClient({
-  uri: process.env.REACT_APP_GRAPHCOOL_URI
-});
+let uri;
+if (process.env.REACT_APP_HOST_ENV === "stage") {
+  uri = process.env.REACT_APP_GRAPHCOOL_STAGE_URI;
+} else {
+  uri = process.env.REACT_APP_GRAPHCOOL_URI;
+}
 
-console.log("ENV:", process.env.REACT_APP_GRAPHCOOL_URI);
+const client = new ApolloClient({ uri });
+
+console.log("ENV:", process.env);
 
 const Router = () => (
   <BrowserRouter>

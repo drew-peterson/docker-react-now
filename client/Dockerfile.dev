@@ -4,4 +4,5 @@ COPY package.json .
 COPY yarn.lock . 
 RUN yarn install
 COPY . .
+ENV REACT_APP_TEST="env test from dockerfile.dev"
 CMD ["yarn", "start"]

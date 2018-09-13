@@ -4,4 +4,6 @@ COPY './package.json' ./
 COPY './yarn.lock' ./
 RUN yarn install
 COPY . .
+# ENV will show up in NODE env
+ENV API_ENV_TEST="this is a test"  
 CMD ["yarn", "dev"]
