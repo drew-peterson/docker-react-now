@@ -15,8 +15,8 @@ const hello = gql`
 class Home extends Component {
   click = async e => {
     e.preventDefault();
-    const res = await axios.get(this.state.url);
-    console.log("res", res);
+    const { data } = await axios.get(this.state.url);
+    console.log("data", data);
   };
 
   state = { url: "/api/hi" };
