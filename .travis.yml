@@ -22,7 +22,7 @@ deploy:
   - provider: script
     # script: now ./client --docker --public --token $NOW_TOKEN && now alias -A ./client/now.json --token $NOW_TOKEN && now rm docker-react-now --safe --yes --token $NOW_TOKEN
     # script: bash deploy-prod.sh
-    script: now ./client --docker --public --token $NOW_TOKEN && now alias -A ./client/now.json --token $NOW_TOKEN
+    script: now ./client --docker --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
     skip_cleanup: true
     on:
       branch: master
