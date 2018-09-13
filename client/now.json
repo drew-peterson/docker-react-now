@@ -3,8 +3,7 @@
   "alias": "drew-prod-client",
   "build": {
     "env": {
-      "REACT_APP_NOW_ENV": "production",
-      "REACT_APP_NOW_SECRET": "@now-secret"
+      "REACT_APP_NOW_ENV": "production"
     }
   }
 }

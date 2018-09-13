@@ -31,7 +31,7 @@ class Home extends Component {
           return (
             <div>
               <h1>{hello.message}</h1>
-              <Link to="/details">Details Prod</Link>
+              <Link to="/details">Details Prod 2</Link>
               <br />
               <br />
               <form onSubmit={this.click}>
