@@ -15,11 +15,11 @@ const hello = gql`
 class Home extends Component {
   click = async e => {
     e.preventDefault();
-    const { data } = await axios.get(this.state.url);
-    this.setState({ text: data });
+    const res = await axios.get(this.state.url);
+    console.log("res", res);
   };
 
-  state = { url: "/api/hi", text: "" };
+  state = { url: "/api/hi" };
 
   render() {
     return (
@@ -42,7 +42,6 @@ class Home extends Component {
                 />
                 <button type="submit">fetch api</button>
               </form>
-              <p>{this.state.text}</p>
             </div>
           );
         }}
