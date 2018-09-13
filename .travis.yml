@@ -21,11 +21,13 @@ deploy:
       master: false
   - provider: script
     # script: now ./client --docker --public --token $NOW_TOKEN && now alias -A ./client/now.json --token $NOW_TOKEN && now rm docker-react-now --safe --yes --token $NOW_TOKEN
+    before_script: cd client
     script:
-      now ./client --docker --public --token $NOW_TOKEN &&
-      now alias --token $NOW_TOKEN
-      now ./api --docker --public --token $NOW_TOKEN &&
-      now alias  --token $NOW_TOKEN &&
+      bash deploy-prod.sh
+      # now --docker --public --token $NOW_TOKEN &&
+      # now alias --token $NOW_TOKEN
+      # now ./api --docker --public --token $NOW_TOKEN &&
+      # now alias  --token $NOW_TOKEN &&
       # now alias drew-prod.now.sh -r rules.json --token $NOW_TOKEN
     skip_cleanup: true
     on:
