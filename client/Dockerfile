@@ -3,12 +3,11 @@ WORKDIR '/app'
 COPY ./package.json ./
 RUN yarn install
 COPY . .
-ARG REACT_APP_NOW
-ARG NOW_TEST
 
-RUN echo "env: $REACT_APP_NOW $NOW_TEST"
-
-ENV REACT_APP_TEST="hello from dockerfile" REACT_APP_N=$REACT_APP_NOW REACT_APP_N2=${REACT_APP_NOW}
+# from now.json will be added to react client
+ARG REACT_APP_NOW_ENV 
+ARG REACT_APP_NOW_SECRET 
+ENV REACT_APP_TEST="hello from dockerfile"
 RUN yarn build
 
 FROM nginx
