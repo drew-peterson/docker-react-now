@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "docker:up": "docker-compose up --remove-orphans",
+    "docker:build": "docker-compose up --build",
+    "docker:clean": "docker-compose rm -f  && docker-compose build --no-cache && yarn docker:up",
+    "graphcool:up": "graphcool local up",
+    "graphcool:stop": "graphcool local stop",
+    "docker:clear": "docker system prune -af"
+  }
+}
