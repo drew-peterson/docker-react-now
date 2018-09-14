@@ -12,6 +12,7 @@ RUN yarn build
 
 FROM nginx
 # look into Cloud v2 deployment now
+# https://zeit.co/docs/getting-started/deployment#now.json
 #  And scaling
 # EXPOSE 80 
 COPY --from=builder /app/build /usr/share/nginx/html

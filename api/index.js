@@ -14,11 +14,8 @@ app.get("/api/env", (req, res) => {
   res.json({ env: process.env });
 });
 
-app.get("/hi", (req, res) => {
-  res.send("hi from /hi");
-});
-
-app.listen(5000, err => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, err => {
   if (err) {
     console.log("API err", err);
   }
