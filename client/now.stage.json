@@ -5,8 +5,5 @@
     "env": {
       "REACT_APP_NOW_ENV": "stage"
     }
-  },
-  "features": {
-    "cloud": "v2"
   }
 }

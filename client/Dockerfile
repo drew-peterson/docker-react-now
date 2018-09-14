@@ -11,8 +11,13 @@ ENV REACT_APP_TEST="hello from dockerfile"
 RUN yarn build
 
 FROM nginx
+# look into Cloud v2 deployment now
+#  And scaling
 # EXPOSE 80 
 COPY --from=builder /app/build /usr/share/nginx/html
+
+
+
 
 # AWS looks for port 80 so if we are doing reverse proxy out front we use port 80
 # now port 80 is already taken so we expose port 3000 and let client nginx accept requests
