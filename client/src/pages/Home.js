@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Query } from "react-apollo";
-import { Link } from "react-router-dom";
-import { Loader, Container, Form, Button } from "semantic-ui-react";
+import { Loader, Form, Button } from "semantic-ui-react";
 import { HELLO } from "graphql/query";
 import { Margin } from "components/common";
 class Home extends Component {
@@ -26,10 +25,9 @@ class Home extends Component {
 
   render() {
     return (
-      <Container>
+      <div>
         {this.renderHeader()}
         <h3>sub header</h3>
-        <Link to="/details">Details</Link>
         <Margin top="2" />
         <Form onSubmit={this.fetchApi}>
           <Form.Field>
@@ -43,7 +41,7 @@ class Home extends Component {
             <Button type="submit">fetch api</Button>
           </Form.Field>
         </Form>
-      </Container>
+      </div>
     );
   }
 }
