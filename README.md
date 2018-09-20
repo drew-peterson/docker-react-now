@@ -27,3 +27,7 @@ now alias drew-prod.now.sh -r rules.json --token $NOW_TOKEN
 ### look into microservices
 
 - https://zeit.co/docs/features/path-aliases
+
+## look into GraphCMS or contenful for CMS
+
+## look into .dockerignore
